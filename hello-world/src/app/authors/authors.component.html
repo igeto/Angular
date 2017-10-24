@@ -1,0 +1,7 @@
+<h2> {{ title }}</h2>
+<ul>
+  <li *ngFor="let author of authors">
+    <span (click)="setFavorite()" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" class="glyphicon"></span>{{ author }}
+  </li>
+  <button class="btn btn-primary" (mouseover)="onSave($event)">Click Me!</button>
+</ul>
